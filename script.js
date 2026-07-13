@@ -3,7 +3,39 @@ const title = document.getElementById('sceneTitle');
 const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modalTitle');
 const modalBody = document.getElementById('modalBody');
+function createPdfViewer(filePath){
 
+    const absoluteUrl = new URL(filePath, window.location.href).href;
+
+    const isMobile =
+        /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if(isMobile){
+
+        return `
+            <iframe
+                class="reportFrame"
+                src="https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(absoluteUrl)}">
+            </iframe>
+
+            <a
+                class="linkBtn"
+                href="${absoluteUrl}"
+                target="_blank">
+                Open report separately
+            </a>
+        `;
+
+    }
+
+    return `
+        <iframe
+            class="reportFrame"
+            src="${absoluteUrl}">
+        </iframe>
+    `;
+
+}
 const SCENES = {
   home: {
     title: 'HOME',
@@ -177,7 +209,7 @@ const MODALS = {
       <a class="linkBtn" href="assets/Bracing - Blind Cover - 004 _ 31.01.24 - BR 174 680 53 01 E1_16.02.2024.PDF" target="_blank">CMM Report</a>
       <a class="linkBtn" href="assets/cmm_thumb_nut_report.pdf" target="_blank">Thumb Nut Report</a>
       <a class="linkBtn" href="assets/cmm_thumb_screw_report.pdf" target="_blank">Thumb Screw Report</a>
-      <iframe class="reportFrame" src="assets/cmm_manifold_report.pdf"></iframe>
+      ${createPdfViewer('assets/cmm_manifold_report.pdf')}
     `
   },
 
