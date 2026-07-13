@@ -725,4 +725,74 @@ body{
 
     text-align:center !important;
   }
+}/* ==================================================
+   CORECTIE MOBIL: PDF + TEXTUL DIN PANOU
+   ================================================== */
+
+@media screen and (max-width:900px){
+
+  .panel3d{
+    position:absolute !important;
+    left:10px !important;
+    right:10px !important;
+    bottom:10px !important;
+    width:auto !important;
+    max-width:calc(100% - 20px) !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    padding:12px 14px !important;
+    transform:none !important;
+    overflow:visible !important;
+  }
+
+  .panel3d h2{
+    display:block !important;
+    width:100% !important;
+    margin:0 0 6px 0 !important;
+    padding:0 !important;
+    font-size:14px !important;
+    line-height:1.25 !important;
+    white-space:normal !important;
+    overflow:visible !important;
+    overflow-wrap:anywhere !important;
+  }
+
+  .panel3d p{
+    display:block !important;
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-size:10px !important;
+    line-height:1.4 !important;
+    white-space:normal !important;
+    overflow:visible !important;
+    overflow-wrap:anywhere !important;
+  }
+
+  .modalBox{
+    width:calc(100vw - 16px) !important;
+    max-width:none !important;
+    max-height:92vh !important;
+    padding:14px !important;
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+  }
+
+  .reportFrame{
+    display:block !important;
+    width:100% !important;
+    height:62vh !important;
+    min-height:480px !important;
+    margin-top:10px !important;
+    border:0 !important;
+    border-radius:10px !important;
+    background:#fff !important;
+  }
+
+  .modalBox .linkBtn{
+    display:block !important;
+    width:100% !important;
+    margin:10px 0 0 0 !important;
+    text-align:center !important;
+  }
 }
