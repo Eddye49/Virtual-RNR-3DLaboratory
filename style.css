@@ -795,4 +795,393 @@ body{
     margin:10px 0 0 0 !important;
     text-align:center !important;
   }
+}/* ==================================================
+   REPARATIE DEFINITIVA TELEFON
+   ================================================== */
+
+@media screen and (max-width:1200px){
+
+  html,
+  body{
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+  }
+
+  body{
+    display:block !important;
+  }
+
+  /* MENIU SUS, NU IN STANGA */
+
+  .sidebar{
+    position:relative !important;
+    left:auto !important;
+    top:auto !important;
+    bottom:auto !important;
+
+    width:100% !important;
+    height:auto !important;
+
+    padding:8px !important;
+
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:5px !important;
+
+    border-right:0 !important;
+    border-bottom:1px solid var(--line) !important;
+  }
+
+  .brand{
+    width:100% !important;
+    margin:0 0 5px 0 !important;
+  }
+
+  .brand img{
+    width:52px !important;
+    height:36px !important;
+  }
+
+  .nav,
+  #auditMode{
+    flex:1 1 calc(33.333% - 6px) !important;
+    width:auto !important;
+
+    margin:0 !important;
+    padding:8px 5px !important;
+
+    font-size:9px !important;
+    text-align:center !important;
+    white-space:normal !important;
+  }
+
+  #auditMode{
+    margin-top:0 !important;
+  }
+
+  /* ZONA PRINCIPALA PE TOATA LATIMEA */
+
+  .stage{
+    margin-left:0 !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    perspective:none !important;
+  }
+
+  .hud{
+    position:relative !important;
+
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+    bottom:auto !important;
+
+    width:100% !important;
+    height:auto !important;
+
+    padding:6px 8px !important;
+
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:4px 8px !important;
+
+    font-size:8px !important;
+    white-space:normal !important;
+  }
+
+  /* SCENA */
+
+  .scene{
+    position:relative !important;
+    inset:auto !important;
+
+    width:calc(100% - 12px) !important;
+    height:auto !important;
+    min-height:0 !important;
+
+    margin:6px !important;
+
+    border-radius:14px !important;
+    overflow:visible !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+  }
+
+  /* IMAGINEA */
+
+  .roomPhoto{
+    position:relative !important;
+    inset:auto !important;
+
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:9 / 16 !important;
+
+    flex:none !important;
+
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+
+    transform:none !important;
+
+    border-radius:14px 14px 0 0 !important;
+    overflow:hidden !important;
+  }
+
+  .cleanMask{
+    display:none !important;
+  }
+
+  /* HOTSPOTURI */
+
+  .hotspot{
+    min-width:0 !important;
+    max-width:38% !important;
+
+    padding:5px 7px !important;
+
+    font-size:8px !important;
+    line-height:1.15 !important;
+
+    white-space:normal !important;
+    text-align:left !important;
+
+    transform:translate(-50%,-50%) !important;
+  }
+
+  .hotspot::before{
+    width:6px !important;
+    height:6px !important;
+    margin-right:4px !important;
+  }
+
+  /* PANOUL DE JOS DEVINE BLOC NORMAL */
+
+  .panel3d{
+    position:relative !important;
+
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+    bottom:auto !important;
+
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    min-height:0 !important;
+
+    margin:0 !important;
+    padding:14px !important;
+
+    transform:none !important;
+
+    border-radius:0 0 14px 14px !important;
+
+    overflow:visible !important;
+    white-space:normal !important;
+  }
+
+  .panel3d h2{
+    width:100% !important;
+
+    margin:0 0 7px 0 !important;
+
+    font-size:15px !important;
+    line-height:1.25 !important;
+
+    white-space:normal !important;
+    overflow:visible !important;
+    overflow-wrap:anywhere !important;
+  }
+
+  .panel3d p{
+    width:100% !important;
+
+    margin:0 !important;
+
+    font-size:11px !important;
+    line-height:1.45 !important;
+
+    white-space:normal !important;
+    overflow:visible !important;
+    overflow-wrap:anywhere !important;
+  }
+
+  /* HOME: FARA SUPRAPUNERE */
+
+  .scene.home{
+    min-height:auto !important;
+    padding:18px !important;
+  }
+
+  .scene.home .homeBg,
+  .scene.home .floorGrid{
+    position:absolute !important;
+    inset:0 !important;
+  }
+
+  .scene.home .hero{
+    position:relative !important;
+
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:0 !important;
+
+    z-index:2 !important;
+  }
+
+  .scene.home .hero h1{
+    font-size:25px !important;
+    line-height:1.05 !important;
+  }
+
+  .scene.home .hero p{
+    font-size:13px !important;
+    line-height:1.4 !important;
+  }
+
+  .scene.home .cards{
+    position:relative !important;
+
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+
+    width:100% !important;
+
+    margin-top:18px !important;
+
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:9px !important;
+
+    z-index:2 !important;
+  }
+
+  .scene.home .card{
+    width:100% !important;
+    padding:12px !important;
+  }
+
+  .scene.home .card span{
+    font-size:11px !important;
+  }
+
+  /* REPORTS: FARA SUPRAPUNERE */
+
+  .scene.reports{
+    min-height:auto !important;
+    padding:18px !important;
+  }
+
+  .scene.reports .hero{
+    position:relative !important;
+
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+
+    width:100% !important;
+    max-width:100% !important;
+
+    z-index:2 !important;
+  }
+
+  .scene.reports .hero h1{
+    font-size:23px !important;
+  }
+
+  .scene.reports .hero p{
+    font-size:12px !important;
+  }
+
+  .scene.reports .cards{
+    position:relative !important;
+
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+
+    width:100% !important;
+
+    margin-top:16px !important;
+
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+
+    z-index:2 !important;
+  }
+
+  /* MODAL SI PDF */
+
+  .modal{
+    padding:8px !important;
+  }
+
+  .modalBox{
+    width:calc(100vw - 16px) !important;
+    max-width:none !important;
+    max-height:92vh !important;
+
+    padding:14px !important;
+
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+  }
+
+  .modalBox h2{
+    padding-right:42px !important;
+
+    font-size:18px !important;
+    line-height:1.25 !important;
+  }
+
+  .modalBox p{
+    font-size:11px !important;
+    line-height:1.4 !important;
+  }
+
+  .modalGrid{
+    grid-template-columns:1fr !important;
+  }
+
+  .gallery{
+    grid-template-columns:1fr !important;
+  }
+
+  .reportFrame{
+    display:block !important;
+
+    width:100% !important;
+    height:65vh !important;
+    min-height:480px !important;
+
+    margin-top:10px !important;
+
+    border:0 !important;
+    border-radius:10px !important;
+
+    background:#fff !important;
+  }
+
+  .linkBtn{
+    display:block !important;
+
+    width:100% !important;
+
+    margin:8px 0 0 0 !important;
+
+    text-align:center !important;
+  }
 }
