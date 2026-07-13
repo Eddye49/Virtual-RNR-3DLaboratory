@@ -339,6 +339,15 @@ function loadScene(name){
       <p>${s.panel}</p>
     </div>
   `;
+  const isMobile = window.innerWidth <= 768;
+
+if (isMobile) {
+    scene.style.transform = "scale(1)";
+    scene.style.transformOrigin = "top left";
+} else {
+    scene.style.transform = "";
+    scene.style.transformOrigin = "";
+}
 
   s.hotspots.forEach(h => {
     const btn = document.createElement('button');
@@ -415,3 +424,12 @@ document.addEventListener('keydown', e => {
 });
 
 loadScene('home');
+window.addEventListener("resize", () => {
+
+    const active = document.querySelector(".nav.active");
+
+    if (active) {
+        loadScene(active.dataset.scene);
+    }
+
+});
