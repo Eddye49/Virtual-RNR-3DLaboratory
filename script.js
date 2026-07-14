@@ -74,11 +74,11 @@ const SCENES = {
     panelTitle: 'CMM ROOM - Precision that inspires confidence',
     panel: 'Tactile dimensional inspection and CMM scanning for injection molded parts, prototypes, devices and technical components. Controlled flow: CAD, strategy, measurement, reporting and technical decision.',
     hotspots: [
-    ['Go to Surface Measurement and Prototyping', 'surface', 2, 12, 24, 10],
-    ['Hexagon GLOBAL Advantage', 'cmmInfo', 40, 30, 34, 30],
-    ['PC-DMIS Software', 'pca', 80, 48, 76, 47],
-    ['CMM Reports', 'cmmReports', 72, 65, 72, 63],
-    ['Go to 3D Scanning Room', 'atos', 7, 82, 22, 76]
+    ['Go to Surface Measurement and Prototyping', 'surface', 1, 12, 24, 10],
+    ['Hexagon GLOBAL Advantage', 'cmmInfo', 35, 30, 34, 30],
+    ['PC-DMIS Software', 'cmmWorkstation', 75, 50, 76, 47],
+    ['CMM Reports', 'cmmReports', 64, 57, 72, 63],
+    ['Go to 3D Scanning Room', 'atos', 1, 82, 22, 76]
 ],
   },
 
@@ -88,11 +88,11 @@ const SCENES = {
     panelTitle: 'ATOS SCAN - CAD vs Scaned Part.',
     panel: '3D optical scanning transforms each component into a complete digital model, used for CAD comparison, dimensional analysis, deviation maps, reverse engineering and product validation.',
     hotspots: [
-    ['Scan Part', 'scanPart', 38, 35, 28, 27],
+    ['Scan Part', 'atosPart', 38, 35, 28, 27],
     ['GOM / ATOS Report', 'atosReport', 56, 35, 59, 27],
-    ['ATOS Core Scanner', 'atosInfo', 78, 50, 76, 43],
-    ['Go to Surface Measurement and Prototyping', 'surface', 88, 18, 77, 14],
-    ['Back to CMM', 'cmm', 8, 81, 20, 76]
+    ['ATOS Core Scanner', 'atosInfo', 76, 50, 76, 43],
+    ['Go to Surface Measurement and Prototyping', 'surface', 75, 10, 77, 14],
+    ['Back to CMM', 'cmm', 4, 81, 20, 76]
 ],
   },
 
@@ -102,11 +102,11 @@ const SCENES = {
     panelTitle: 'Advanced Materials & Surface Engineering Lab',
     panel: 'A multidisciplinary laboratory combining additive manufacturing, material characterization and precision surface metrology. The facility integrates FDM 3D printing, moisture analysis, optical profile measurement and surface roughness evaluation to accelerate product development, validate manufacturing processes and ensure compliance with customer requirements.',
     hotspots: [
-    ['Engineering Lab Overview', 'surfaceOverview', 15, 13, 25, 11],
-    ['Keyence Profilometer', 'profilometer', 48, 45, 51, 34],
-    ['3D Printer', 'printer', 20, 60, 18, 55],
-    ['XM66 Moisture', 'xm66', 42, 60, 44, 55],
-    ['Roughness Tester', 'roughness', 70, 60, 73, 55],
+    ['Engineering Lab Overview', 'room2Overview', 10, 10, 25, 11],
+    ['Keyence Profilometer', 'profilometer', 49, 43, 51, 34],
+    ['3D Printer', 'printer', 17, 50, 18, 55],
+    ['XM66 Moisture', 'xm66', 35, 50, 44, 55],
+    ['Roughness Tester', 'roughness', 68, 50, 73, 55],
     ['Go to Storage', 'storage', 86, 18, 79, 18]
 ],
   },
@@ -117,11 +117,11 @@ const SCENES = {
     panelTitle: 'STORAGE - Golden samples, Devices, Tools.',
     panel: 'Area for standard parts, devices, accessories, technical boxes and validated samples.',
     hotspots: [
-    ['Prototype Storage', 'prototype', 65, 22, 69, 18],
-    ['Fixtures / Gauges', 'fixtures', 44, 30, 43, 27],
+    ['Prototype Storage', 'prototype', 68, 22, 69, 18],
+    ['Fixtures / Gauges', 'fixtures', 48, 28, 43, 27],
     ['Reports Center', 'reports', 80, 42, 79, 37],
-    ['Reference Parts', 'reference', 63, 67, 66, 62],
-    ['Back to Entrance', 'entrance', 8, 80, 20, 76]
+    ['Reference Parts', 'referenceParts', 63, 67, 66, 62],
+    ['Back to Entrance', 'entrance', 5, 80, 20, 76]
 ],
   },
 
