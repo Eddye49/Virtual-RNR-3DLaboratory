@@ -74,12 +74,12 @@ const SCENES = {
     panelTitle: 'CMM ROOM - Precision that inspires confidence',
     panel: 'Tactile dimensional inspection and CMM scanning for injection molded parts, prototypes, devices and technical components. Controlled flow: CAD, strategy, measurement, reporting and technical decision.',
     hotspots: [
-      ['Hexagon GLOBAL Advantage', 'cmmInfo',32, 30],
-      ['PC-DMIS Software', 'cmmWorkstation', 72, 48],
-      ['CMM Reports', 'cmmReports', 65, 58],
-      ['Go to 3D Scanning Room', 'atos', 1, 75],
-      ['Go to Surface Measurement and Prototyping', 'surface', 10, 12]
-    ]
+    ['Go to Surface Measurement and Prototyping', 'surface', 2, 12, 24, 10],
+    ['Hexagon GLOBAL Advantage', 'cmmInfo', 40, 30, 34, 30],
+    ['PC-DMIS Software', 'pca', 80, 48, 76, 47],
+    ['CMM Reports', 'cmmReports', 72, 65, 72, 63],
+    ['Go to 3D Scanning Room', 'atos', 7, 82, 22, 76]
+],
   },
 
   atos: {
@@ -88,12 +88,12 @@ const SCENES = {
     panelTitle: 'ATOS SCAN - CAD vs Scaned Part.',
     panel: '3D optical scanning transforms each component into a complete digital model, used for CAD comparison, dimensional analysis, deviation maps, reverse engineering and product validation.',
     hotspots: [
-      ['ATOS Core Scanner', 'atosInfo', 78, 42],
-      ['Scan Part', 'atosPart', 37, 26],
-      ['GOM / ATOS Report', 'atosReport', 57, 26],
-      ['Go to Surface Measurement and Prototyping', 'surface', 84, 16],
-      ['Back to CMM', 'cmm', 4, 84]
-    ]
+    ['Scan Part', 'scanPart', 38, 35, 28, 27],
+    ['GOM / ATOS Report', 'atosReport', 56, 35, 59, 27],
+    ['ATOS Core Scanner', 'atosInfo', 78, 50, 76, 43],
+    ['Go to Surface Measurement and Prototyping', 'surface', 88, 18, 77, 14],
+    ['Back to CMM', 'cmm', 8, 81, 20, 76]
+],
   },
 
   surface: {
@@ -102,13 +102,13 @@ const SCENES = {
     panelTitle: 'Advanced Materials & Surface Engineering Lab',
     panel: 'A multidisciplinary laboratory combining additive manufacturing, material characterization and precision surface metrology. The facility integrates FDM 3D printing, moisture analysis, optical profile measurement and surface roughness evaluation to accelerate product development, validate manufacturing processes and ensure compliance with customer requirements.',
     hotspots: [
-      ['Engineering Lab Overview', 'room2Overview', 10, 08],
-      ['3D Printer', 'printer', 18, 50],
-      ['XM66 Moisture', 'xm66', 35, 50],
-      ['Keyence Profilometer', 'profilometer', 50, 30],
-      ['Roughness Tester', 'roughness', 70, 50],
-      ['Go to Storage', 'storage', 84, 18]
-    ]
+    ['Engineering Lab Overview', 'surfaceOverview', 15, 13, 25, 11],
+    ['Keyence Profilometer', 'profilometer', 48, 45, 51, 34],
+    ['3D Printer', 'printer', 20, 60, 18, 55],
+    ['XM66 Moisture', 'xm66', 42, 60, 44, 55],
+    ['Roughness Tester', 'roughness', 70, 60, 73, 55],
+    ['Go to Storage', 'storage', 86, 18, 79, 18]
+],
   },
 
   storage: {
@@ -117,12 +117,12 @@ const SCENES = {
     panelTitle: 'STORAGE - Golden samples, Devices, Tools.',
     panel: 'Area for standard parts, devices, accessories, technical boxes and validated samples.',
     hotspots: [
-      ['Reference Parts', 'referenceParts', 66, 62],
-      ['Fixtures / Gauges', 'fixtures', 46, 27],
-      ['Prototype Storage', 'prototype', 69, 22],
-      ['Reports Center', 'reports', 86, 36],
-      ['Back to Entrance', 'entrance', 2, 78]
-    ]
+    ['Prototype Storage', 'prototype', 65, 22, 69, 18],
+    ['Fixtures / Gauges', 'fixtures', 44, 30, 43, 27],
+    ['Reports Center', 'reports', 80, 42, 79, 37],
+    ['Reference Parts', 'reference', 63, 67, 66, 62],
+    ['Back to Entrance', 'entrance', 8, 80, 20, 76]
+],
   },
 
   reports: {
@@ -381,15 +381,29 @@ if (isMobile) {
     scene.style.transformOrigin = "";
 }
 
-  s.hotspots.forEach(h => {
+  const mobileView = window.innerWidth <= 900;
+
+s.hotspots.forEach(h => {
+
     const btn = document.createElement('button');
+
     btn.className = 'hotspot';
-    btn.style.left = h[2] + '%';
-    btn.style.top = h[3] + '%';
+
+    const desktopX = h[2];
+    const desktopY = h[3];
+
+    const mobileX = h[4] ?? desktopX;
+    const mobileY = h[5] ?? desktopY;
+
+    btn.style.left = (mobileView ? mobileX : desktopX) + '%';
+    btn.style.top = (mobileView ? mobileY : desktopY) + '%';
+
     btn.textContent = h[0];
+
     btn.onclick = () => handleHotspot(h[1]);
+
     scene.appendChild(btn);
-  });
+});
 }
 
 function handleHotspot(id){
