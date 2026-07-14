@@ -1637,7 +1637,7 @@ body{
         right:6% !important;
         width:390px !important;
     }
-}}
+}
 
 /* =========================================================
    POZITIONARE FINALA PANOU DESKTOP
@@ -1710,6 +1710,18 @@ body{
         right:5% !important;
 
         width:min(58%,1150px) !important;
+    }
+
+}/* CORECTIE FINALA: REZERVA SPATIU IN STANGA PENTRU BUTOANE */
+
+@media screen and (min-width:1201px){
+
+    .scene.photo .panel3d{
+        left:auto !important;
+        right:3% !important;
+        width:min(64%,1000px) !important;
+        max-width:64% !important;
+        transform:none !important;
     }
 
 }
