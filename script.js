@@ -137,7 +137,7 @@ const SCENES = {
         <a class="linkBtn" href="assets/RC_Poincon_de_forme_17_06_2025.pdf.pdf" target="_blank">ATOS Report</a>
         <a class="linkBtn" href="assets/fisa_xr_capabilitate.pdf" target="_blank">Fisa X-R / Capabilitate</a>
         <a class="linkBtn" href="assets/rnr_capabilities_brochure.pdf" target="_blank">RNR Capabilities Brochure</a>
-        <a class="linkBtn" href="assets/rnr_laboratoare_2026.pdf" target="_blank">RNR Laboratory Presentation</a>
+        <a class="linkBtn" href="Project/index.html" target="_blank">RNR Laboratory Presentation</a>
       </div>
       <div class="cards">
         <div class="card"><b>CMM Reports</b><span>Dimensional report, GD&T, position, perpendicularity and deviation display.</span></div>
@@ -155,7 +155,7 @@ const MODALS = {
       <p>RONERA Rubber - Plastic Division Metrology & Technical Support Laboratory integrates CMM measurement, 3D optical scanning, surface inspection, material moisture control, prototyping and technical reporting.</p>
       <p>Supported capabilities: CMM inspection, 3D scanning, GD&T, CAD vs part, roughness, capability, PPAP, dimensional reports and audit support.</p>
       <a class="linkBtn" href="assets/rnr_capabilities_brochure.pdf" target="_blank">Open Brochure</a>
-      <a class="linkBtn" href="assets/rnr_laboratoare_2026.pdf" target="_blank">Open Laboratory Presentation</a>
+      <a class="linkBtn" href="Project/index.html" target="_blank">Open Laboratory Presentation</a>
     `
   },
 
